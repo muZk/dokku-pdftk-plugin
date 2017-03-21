@@ -8,7 +8,7 @@ verify_app_name "$APP"
 
 dokku_log_info1 "Installing pdftk..."
 
-CMD="command -v identify >/dev/null 2>&1 && \
+CMD="command -v pdftk >/dev/null 2>&1 && \
   dpkg -s pdftk ghostscript > /dev/null 2>&1 || \
   (apt-get update && apt-get install -y pdftk ghostscript && apt-get clean)"
 
